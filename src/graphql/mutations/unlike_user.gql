@@ -1,0 +1,6 @@
+mutation unlikeUser($targetUserId: ID!) {
+  unlikeUser(targetUserId: $targetUserId) {
+    success
+    errors
+  }
+}

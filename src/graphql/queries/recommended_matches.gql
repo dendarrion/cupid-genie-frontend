@@ -1,0 +1,13 @@
+query fetchMatchable ($id: ID) {
+  recommendedMatches (id: $id) {
+    id
+    fullName
+    age
+    profilePicture
+    gallery
+    bio
+    country
+    region
+    city
+  }
+}

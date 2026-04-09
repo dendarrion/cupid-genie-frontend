@@ -1,0 +1,19 @@
+query currentUser {
+  currentUser {
+      id
+      fullName
+      firstName
+      lastName
+      age
+      dateOfBirth
+      gender
+      genderInterest
+      bio
+      thumbnail
+      profilePicture
+      gallery
+      country
+      region
+      city
+  }
+}

@@ -1,0 +1,24 @@
+mutation loginUser($email:String!, $password:String!) {
+  loginUser(email: $email, password: $password) {
+    token
+    admin
+    user {
+      id
+      fullName
+      firstName
+      lastName
+      age
+      dateOfBirth
+      gender
+      genderInterest
+      bio
+      thumbnail
+      profilePicture
+      gallery
+      country
+      region
+      city
+    }
+    errors
+  }
+}

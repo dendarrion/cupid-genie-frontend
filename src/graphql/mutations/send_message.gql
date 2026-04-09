@@ -1,0 +1,18 @@
+mutation SendMessage($matchId: ID!, $content: String!) {
+  sendMessage(matchId: $matchId, content: $content) {
+    message {
+      id
+      content
+      timeSent
+      createdAt
+      sender {
+        id
+        fullName
+      }
+    }
+    conversation {
+      id
+    }
+    errors
+  }
+}

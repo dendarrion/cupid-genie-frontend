@@ -1,0 +1,17 @@
+mutation createInteraction($targetUserId:ID!, $kind:InteractionKindEnum!) {
+  createInteraction(targetUserId: $targetUserId, kind:$kind) {
+    errors
+    matched
+    interaction {
+      id
+      kind
+      targetUser {
+        id
+        firstName
+        lastName
+        fullName
+        profilePicture
+      }
+    }
+  }
+}

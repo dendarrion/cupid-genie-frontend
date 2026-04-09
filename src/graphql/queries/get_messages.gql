@@ -1,0 +1,13 @@
+query getMessages($conversationId: ID!) {
+  messages(conversationId: $conversationId) {
+    id
+    content
+    createdAt
+    timeSent
+    sender {
+      id
+      fullName
+      thumbnail
+    }
+  }
+}

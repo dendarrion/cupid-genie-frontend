@@ -1,0 +1,24 @@
+mutation createUser($input: CreateUserInput!) {
+  createUser(input: $input) {
+    errors
+    token
+    user {
+      firstName
+      lastName
+      fullName
+      age
+      dateOfBirth
+      country
+      region
+      city
+      gender
+      genderInterest
+      bio
+      phone
+      email
+      thumbnail
+      gallery
+    }
+  }
+
+}

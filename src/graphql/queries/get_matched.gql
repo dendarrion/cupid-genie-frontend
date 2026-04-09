@@ -1,0 +1,21 @@
+query matches($id: ID) {
+  matchedUsers(id: $id) {
+    id
+    status
+    matchedAt
+    otherUser {
+      id
+      fullName
+      profilePicture
+      thumbnail
+    }
+    conversation {
+      id
+      lastMessage {
+        id
+        content
+        timeSent
+      }
+    }
+  }
+}

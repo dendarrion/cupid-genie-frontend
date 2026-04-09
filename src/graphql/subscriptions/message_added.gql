@@ -1,0 +1,13 @@
+subscription MessageAdded($conversationId: ID!) {
+  messageAdded(conversationId: $conversationId) {
+    message {
+      id
+      content
+      createdAt
+      sender {
+        id
+        fullName
+      }
+    }
+  }
+}

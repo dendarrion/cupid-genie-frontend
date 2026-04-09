@@ -1,0 +1,6 @@
+mutation unmatchUser($targetUserId: ID!) {
+  unmatchUser(targetUserId: $targetUserId) {
+    success
+    errors
+  }
+}

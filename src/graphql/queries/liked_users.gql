@@ -1,0 +1,7 @@
+query liked_users($id: ID) {
+  likedUsers(id: $id) {
+    id
+    fullName
+    profilePicture
+  }
+}
