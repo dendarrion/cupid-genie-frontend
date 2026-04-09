@@ -6,7 +6,7 @@ import { getMainDefinition } from '@apollo/client/utilities'
 import { setContext } from '@apollo/client/link/context'
 
 const uploadLink = createUploadLink({
-    uri: 'http://localhost:3000/graphql',
+    uri: import.meta.env.VITE_API_URL,
 })
 const authLink = setContext((_, { headers }) => {
     const token = localStorage.getItem('token')
@@ -19,7 +19,7 @@ const authLink = setContext((_, { headers }) => {
 })
 const httpLink = authLink.concat(uploadLink)
 const wsLink = new GraphQLWsLink(
-    createClient({ uri: 'ws://localhost:5000/', })
+    createClient({ uri: import.meta.env.VITE_GRAPHQL_WS_URL, })
 )
 
 const link = split(
